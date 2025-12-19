@@ -1,0 +1,101 @@
+:root {
+  --clr-1: #333333;
+  --clr-2: #f45e99;
+  --clr-3: #eee;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 6rem;
+  background-color: var(--clr-3);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  color: var(--clr-1);
+  font-size: 4.2rem;
+  margin-bottom: 2rem;
+}
+
+.container {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.color-container {
+  width: 18rem;
+  height: 22rem;
+  outline: 2px solid var(--clr-1);
+}
+
+.color {
+  width: inherit;
+  height: 18rem;
+  background-color: var(--clr-2);
+}
+
+.color-code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: 4rem;
+  font-size: 1.8rem;
+  outline: 2px solid var(--clr-1);
+  cursor: pointer;
+  background-color: var(--clr-3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  user-select: all;
+  color: var(--clr-1);
+}
+
+button {
+  padding-inline: 3rem;
+  padding-block: 1rem;
+  border-radius: 56px;
+  -webkit-border-radius: 56px;
+  -moz-border-radius: 56px;
+  -ms-border-radius: 56px;
+  -o-border-radius: 56px;
+  background: var(--clr-1);
+  color: var(--clr-3);
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+  letter-spacing: 1.4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding-block: 4rem;
+  }
+  .container {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 3.2rem;
+    text-align: center;
+  }
+}
