@@ -7,7 +7,7 @@ This repository includes old learning projects and new random experiments create
 
 ### Random Color Generator
 
-![Random Color Generator](./random-color-generator)
+![Random Color Generator](./random-color-generator.png)
 
 # License
 
