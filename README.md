@@ -7,7 +7,10 @@ This repository includes old learning projects and new random experiments create
 
 ### Random Color Generator
 
-![Random Color Generator](./random-color-generator.png)
+![Random Color Generator](./imgs/random-color-generator.png)
+
+### The pig game
+![The pig game](./imgs/the-pig-game.png)
 
 # License
 

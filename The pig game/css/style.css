@@ -1,0 +1,170 @@
+:root {
+  --bg-clr-body: #2a2f4f;
+  --bg-clr2: #2a2f4f;
+  --bg-clr-active: #917fb3;
+  --winer-bg: #bf76ff;
+  --font-clr: whitesmoke;
+  --font-clr2: #2a2f4f;
+  --box-shadow-clr: #e5beec;
+  --btn-bg-clr: transparent;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-weight: 400;
+  color: var(--font-clr);
+  background-color: var(--bg-clr-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  width: 100rem;
+  height: 60rem;
+  background-color: var(--bg-clr2);
+  filter: blur();
+  overflow: hidden;
+  box-shadow: 0 0 2rem var(--box-shadow-clr);
+  display: flex;
+}
+
+.player {
+  flex: 50%;
+  padding: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+}
+
+.name {
+  font-size: 4rem;
+  font-weight: 300;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  margin-bottom: 1rem;
+}
+
+.score {
+  font-size: 8rem;
+  color: var(--font-clr);
+  margin-bottom: auto;
+}
+
+.player--active {
+  background-color: var(--bg-clr-active);
+}
+
+.player--active .name {
+  font-weight: 700;
+}
+
+.player--active .score {
+  font-weight: 400;
+}
+
+.player--active .current {
+  opacity: 1;
+}
+
+.current {
+  background-color: var(--bg-clr-body);
+  opacity: 0.8;
+  border-radius: 9px;
+  color: var(--font-clr);
+  width: 65%;
+  text-align: center;
+  transition: all 0.75s;
+}
+
+.current-label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: var(--font-clr);
+}
+
+.current-score {
+  font-size: 3.5rem;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  color: white;
+  background: none;
+  border: none;
+  font-family: inherit;
+  text-transform: uppercase !important;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 400;
+  transition: all 0.25s;
+  background-color: var(--btn-bg-clr);
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 0 1rem var(--box-shadow-clr);
+}
+
+.btn::first-letter {
+  display: inline-block;
+  margin-right: 0.2rem;
+}
+
+.btn--new {
+  top: 10%;
+}
+
+.btn--roll {
+  top: 30%;
+}
+
+.btn--hold {
+  top: 46.1rem;
+}
+
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 0 3rem rgba(180, 181, 181, 0.665);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.dice {
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  height: 10rem;
+}
+
+.winner-bg {
+  background-color: var(--winer-bg);
+}
+.winner-bg .score,
+.winner-bg .name {
+  color: var(--font-clr2);
+  font-weight: bolder;
+}
+.hidden {
+  display: none;
+}
